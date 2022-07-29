@@ -1,0 +1,17 @@
+Results for the extraLargeArray
+insert 1.0391096 s
+append 3.6258 ms
+Results for the largeArray
+insert 8.4439 ms
+append 361.8 μs
+Results for the mediumArray
+insert 535.4 μs
+append 280.5 μs
+Results for the smallArray
+insert 15 μs
+append 11.8 μs
+Results for the tinyArray
+insert 24.5 μs
+append 4.4 μs
+
+Insert adds to the beginning of the array. So it scales worse as it has to move all the old elements over by one in order to add to the front. Append scales better because it just adds to the back of the array and nothing has to move to do so. For these same reasons Insert is slower.
